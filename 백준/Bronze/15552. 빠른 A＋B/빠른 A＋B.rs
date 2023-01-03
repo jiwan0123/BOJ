@@ -15,7 +15,6 @@ fn main() {
             .split_whitespace()
             .map(|input| input.parse().unwrap())
             .collect();
-
         writeln!(out, "{}", result[0] + result[1]).unwrap();
     }
 }
