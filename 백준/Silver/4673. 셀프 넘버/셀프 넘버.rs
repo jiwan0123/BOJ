@@ -5,15 +5,12 @@ fn main() {
     let mut output = String::new();
 
     for mut i in 1..10001 as i32 {
+        let mut n = d(i) as usize;
+        if (n < 10001) {
+            v[n] = true;
+        }
         if v[i as usize] == false {
             writeln!(&mut output, "{}", i).unwrap();
-            loop {
-                v[i as usize] = true;
-                i = d(i);
-                if i > 10000 {
-                    break;
-                }
-            }
         }
     }
     print!("{}", output);
